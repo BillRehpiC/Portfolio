@@ -1,0 +1,245 @@
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+header {
+  background-color: #cccccc;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+}
+div.flex-container {
+  display: flex;
+  /* Show the flex items horizontally */
+  flex-direction: row;
+}
+
+div.flex-container > div {
+  margin: 10px;
+}
+
+/* Use media query and show the flex items vertically if screen width is less than 600px */
+@media screen and (max-width:600px) {
+  div.flex-container {
+    flex-direction: column;
+  }
+}
+footer {
+  position: end;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #c0c0c0;
+  padding: 8px;
+  text-align: center;
+  z-index: 1000;
+  border-radius: 25px;
+}
+img {
+  border-radius: 8px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+}
+
+.img {
+  max-width: 300px; /* optional */
+}
+body a:link,
+body a:visited {
+  text-decoration: none;
+}
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0 15px;
+}
+
+.gallery-item {
+  position: relative;
+  width: calc(25% - 20px);
+  height: auto;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.1);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+.banner {
+  width: 100%;
+  max-width: 2000px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Modal content (image) */
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  animation: zoomIn 0.5s;
+}
+
+@keyframes zoomIn {
+  from {transform: scale(0.6);}
+  to {transform: scale(1);}
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+/* Caption of modal image */
+.caption {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-item {
+     width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-item  {
+    width: calc(100% - 20px);
+  }
+}
+a:hover, a:active {
+  background-color: rgba(255, 0, 0, 0);
+  border-radius: 25px;
+}
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+h1 {
+  color: rgb(0, 0, 0);
+  font-family: verdana;
+  font-size: 300%;
+}
+p {
+  color: rgb(0, 0, 0);
+  font-size: 160%;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 30px;
+  margin: 50px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  display: flex;
+   border-radius: 25px;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul a {
+  display: block !important;
+  padding: 14px 16px !important;
+}
+
+
+ul li a:hover {
+  background-color: #111111;
+}.dropdown {
+  position: relative;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #4f4f4f;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 25px;
+}
+
+/* Links inside dropdown content */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 25px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+  
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+   border-radius: 25px;
+}
+
+/* Change background color of dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: #4f4f4f;
+}
